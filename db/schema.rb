@@ -11,23 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150716003536) do
+ActiveRecord::Schema.define(version: 20150716030350) do
 
   create_table "params_sets", force: :cascade do |t|
-    t.string   "param_a",    limit: 255
-    t.string   "float",      limit: 255
-    t.string   "param_b",    limit: 255
-    t.string   "param_c",    limit: 255
-    t.string   "param_d",    limit: 255
+    t.string   "name",       limit: 255
+    t.float    "param_a",    limit: 24
+    t.float    "param_b",    limit: 24
+    t.float    "param_c",    limit: 24
+    t.float    "param_d",    limit: 24
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
   create_table "results", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.integer  "img_id",     limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "name",          limit: 255
+    t.integer  "img_id",        limit: 4
+    t.integer  "params_set_id", limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end

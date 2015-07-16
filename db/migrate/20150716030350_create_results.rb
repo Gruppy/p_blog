@@ -3,8 +3,7 @@ class CreateResults < ActiveRecord::Migration
     create_table :results do |t|
       t.string :name
       t.integer :img_id
-      t.string :params_set_id
-      t.string :integer
+      t.integer :params_set_id
 
       t.timestamps null: false
     end

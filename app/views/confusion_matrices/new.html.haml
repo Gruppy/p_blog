@@ -1,0 +1,3 @@
+.container
+  = form_for @result, url: confusion_matrices_new_path do |f|
+    = f.collection_select :params_set_id, ParamsSet.all, :id, :name

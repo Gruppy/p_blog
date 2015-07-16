@@ -3,11 +3,9 @@
 one:
   name: MyString
   img_id: 1
-  params_set_id: MyString
-  integer: MyString
+  params_set_id: 1
 
 two:
   name: MyString
   img_id: 1
-  params_set_id: MyString
-  integer: MyString
+  params_set_id: 1
