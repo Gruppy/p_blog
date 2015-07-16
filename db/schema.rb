@@ -23,4 +23,11 @@ ActiveRecord::Schema.define(version: 20150716003536) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "results", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "img_id",     limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
 end
