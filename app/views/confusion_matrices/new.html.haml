@@ -1,3 +1,7 @@
 .container
   = form_for @result, url: confusion_matrices_new_path do |f|
-    = f.collection_select :params_set_id, ParamsSet.all, :id, :name
+    = f.collection_select :params_set_id, ParamsSet.all, :id, :name, { class: 'collection-select' }, { id: 'select-result-form' }
+
+  = image_tag '1.jpg', { class: 'confusion-matrix-image' }
+
+= javascript_include_tag 'confusion_matrices'
